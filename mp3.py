@@ -46,7 +46,7 @@ class MP3Playlist:
     def total_duration(self):
         total_seconds = 0
         for track in self.playlist:
-            track_duration = track.duration(60, 120, 420)
+            track_duration = track.duration(60, 120, 240)
             
 
     def clear_playlist(self):
