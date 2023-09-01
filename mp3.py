@@ -19,17 +19,17 @@ class MP3Playlist:
             for index, track in enumerate(self.playlist, start=1):
                 print(f"{index}. {track}")
 
-    def add_track(self, track_name, artiste, album, duration, genre, year):
+    def add_track(self, track_name):
         if track_name.endswith(".mp3"):
             self.playlist.append(track_name, artiste, duration)
             print(f"'{track_name}' has been added to the playlist.")
 
-    def remove_track(self, track_index):
-        if track_index < 0 <= len(self.playlist):
-            removed_track = self.playlist.pop(track_index - 1)
-            print(f"'{removed_track}' has been removed from the playlist.")
-        else:
-            print("Invalid track index.")
+    # def remove_track(self, track_index):
+    #     if track_index < 0 <= len(self.playlist):
+    #         removed_track = self.playlist.pop(track_index - 1)
+    #         print(f"'{removed_track}' has been removed from the playlist.")
+    #     else:
+    #         print("Invalid track index.")
 
     def save_playlist(self, filename):
         New_Playlist = open(filename + ".txt", 'w')
