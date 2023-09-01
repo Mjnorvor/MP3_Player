@@ -21,7 +21,7 @@ class MP3Playlist:
 
     def add_track(self, track_name, artiste, album, duration, genre, year):
         if track_name.endswith(".mp3"):
-            self.playlist.append(track_name)
+            self.playlist.append(track_name, artiste, duration)
             print(f"'{track_name}' has been added to the playlist.")
 
     def remove_track(self, track_index):
